@@ -111,12 +111,14 @@ def main():
     run_type = input(r"Word check + anagram (WC) OR find all words without anagrams (WA)? ")
     while running:
         if run_type.lower() == "wa":
-            # NOTE: the total runtime of this function would be somewhere around
+			pass
+			'''# NOTE: the total runtime of this function would be somewhere around
             # 11 DAYS so optimisation is really neeeded!
             start = timeit.default_timer()
             # anagrams_list = []
             anagram_file = open("Anagrams_sv.txt", "r+")
             for word in all_words:
+				
                 start1 = timeit.default_timer()
                 new_word_obj = word_object(word)
                 #print(new_word_obj.word)
@@ -145,6 +147,7 @@ def main():
             print("Runtime is :", stop - start)
             anagram_file.close()
             running = False
+			'''
         else: #if run_type.lower() == "wc":
             word = input(r"Check if a word is real: ")
             word = word.lower()
